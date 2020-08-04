@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+	<style>
+		html {
+            scroll-behavior: smooth;
+		}
+	</style>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +17,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link real="stylesheet icon" href="../../../assets/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
   <div class="navigation-wrap bg-light start-header start-style">
@@ -19,8 +25,8 @@
 			<div class="row">
 				<div class="col-12">
 					<nav class="navbar navbar-expand-md navbar-light">
-            <a class="navbar-brand" href="#" target="_blank">
-              <img src="../../../assets/logo.png" alt="Logo of site">
+             <a class="navbar-brand" href="#" target="_blank">
+              <img src="../../../assets/logo2.png" alt="Logo of site">
             </a>	
             <h3 class="logo-style">Quiz Vocacional</h3>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,10 +44,10 @@
 									<a class="nav-link" href="#guia">Guia</a>
 								</li>
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" dhref="#rodapé">Contato</a>
+									<a class="nav-link" href="#rodape">Contato</a>
 								</li>
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-									<a class="nav-link" href="#">Entre</a>
+									<a class="nav-link" data-toggle="modal" data-target="#myModal1">Entre</a>
 								</li>
 								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
 									<a class="nav-link" data-toggle="modal" data-target="#myModal">Cadastre-se</a>
@@ -66,7 +72,6 @@
   <!-- Modal Corpo -->
     <div class="modal-body">
         <div class="container">
-            <h2>Stacked form</h2>
             <form action="/action_page.php">
                 <div class="form-group">
                      <label for="email">Email:</label>
@@ -93,6 +98,42 @@
   </div>
   </div>
   <!--Topo da Página-->
+
+<!-- Modal Entrar -->
+  <div class="modal" id="myModal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+      
+  <!-- Cabeça Modal -->
+  <div class="modal-header">
+    <h4 class="modal-title">Entrar</h4>
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+  </div>      
+  <!-- Modal Corpo -->
+    <div class="modal-body">
+        <div class="container">
+            <form action="/action_page.php">
+                <div class="form-group">
+                     <label for="email">Email:</label>
+                     <input type="email" class="form-control" id="email" placeholder="" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Senha:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="" name="pswd">
+                </div>
+                <div class="form-group form-check">
+                </div>
+            </form>
+        </div>
+    </div>
+  <!-- Modal footer -->
+  <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Entrar</button>
+  </div>
+  </div>
+  </div>
+  </div>
+  <!--Topo da Página-->
   <div class="parallax"></div>
     <section class="nome">
 	    <container>
@@ -105,7 +146,7 @@
 		</container>
     </section>
   <!--BEM VINDO-->
-  <section class="bemvindo">
+  <section class="bemvindo" id="bemvindo"
 	  <container>
 	    <div class="col-12" style="padding-top: 120px;">
 		    <h1 class="heading-1">Bem-Vindo</h1>
@@ -119,7 +160,7 @@
 	  </container>	
   </section> 
   <!--SOBRE-->   
-  <section class="sobre">
+  <section class="sobre" id="sobre">
 	  <container>
 		<h1 class="heading-2" style="margin-left: 550px;">Sobre-Nós</h1>
 		<div class="parallax" style="height:300px;">
@@ -136,7 +177,7 @@
 	  </container>
   </section>
   <!--GUIA-->
-  <section class="guia">
+  <section class="guia" id="guia">
 	  <container>
 		  <h1 class="heading-1">Guia</h1>
 		  <p class="p-1"> 
@@ -189,15 +230,18 @@
 	  </container>
   </section>
   <!--CONTATO/RODAPÉ-->
-  <footer class="rodapé">
+  <footer class="rodapé" id="rodape">
   </footer>
   <container> 
 	<h3 class="h-rodapé">Contato</h3>
 	<h6 class="h-rodapé-2">Email: xxxxxxxxxxxxxx@xxxx.xxx</h6>
 	<section class="icones-posição">
-	 <img class="icones2" src="../../../assets/facebook.png">
-	 <img class="icones2" src="../../../assets/instagram.png">
-	 <img class="icones2" src="../../../assets/whatsapp.png">
+		<ul class="social-icons">
+			<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>  
+			<li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+			<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+			<li><a class="whatsapp" href="#"><i class="fa fa-whatsapp"></i></a></li>
+		</ul>
 	 </section>
   </container>
   <!--PARCIAL-->
